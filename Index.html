@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title Here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section>
+    <h1>What does your name say about your personality?</h1>
+    <div class="centerDiv">
+        <div class="details">
+            <label for=""> Enter your name.</label>
+            <input type="text" name="" id="nameId">
+        </div>
+    </div>
+
+    <div class="imageDiv">
+        <img src="img.webp" width="200" height="200" class="imgChange">
+    </div>
+
+    <button>Submit</button>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('button').click(function() {
+            const name = $('#nameId').val();
+            alert('Button clicked!');
+            $('.imgChange').attr('src', `https://joesch.moe/api/v1/${name}`);
+        });
+    });
+</script>
+
+</body>
+</html>
